@@ -1,0 +1,35 @@
+.navbar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;  
+}
+
+.navbar-links-display {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar-links {
+    position: relative;
+    font-size: 1.125rem;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-duration: 200ms;
+}
+
+.navbar-link-underline {
+    position: absolute;
+    bottom: -0.25rem;
+    left: 50%;
+    height: 0.125rem;
+    transform: translateX(-50%);
+    transition: width 0.3s, background-color 0.3s;
+    background-color: var(--foreground);
+    width: 0;
+}
+
+.navbar-links:hover .navbar-link-underline,
+.navbar-link-underline.active {
+  width: 100%;
+}
